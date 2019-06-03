@@ -1,0 +1,9 @@
+<h1>GamesController#new</h1>
+
+<%= @letters %>
+<form  action="/games_controller/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="attempt" placeholder="Put your longest word here">
+  <input type="hidden" name="grid" value="<%= @letters %>"  >
+  <input type="submit">
+</form>
